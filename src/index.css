@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #eef2ff;
+  color: #172033;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 48px 20px;
+}
+
+.board {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  background: white;
+  border-radius: 24px;
+  padding: 34px;
+  box-shadow: 0 18px 50px rgba(31, 41, 55, 0.12);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #5b5bd6;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(30px, 6vw, 48px);
+  line-height: 1.05;
+}
+
+.subtitle {
+  margin: 12px 0 0;
+  color: #667085;
+}
+
+.count {
+  min-width: 82px;
+  padding: 14px;
+  border-radius: 16px;
+  background: #f3f4ff;
+  text-align: center;
+}
+
+.count strong {
+  display: block;
+  font-size: 28px;
+}
+
+.count span {
+  color: #667085;
+  font-size: 13px;
+}
+
+.add-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.add-form input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #d9deea;
+  border-radius: 12px;
+  padding: 14px 16px;
+  outline: none;
+}
+
+.add-form input:focus {
+  border-color: #5b5bd6;
+  box-shadow: 0 0 0 3px rgba(91, 91, 214, 0.12);
+}
+
+.add-form button {
+  border: 0;
+  border-radius: 12px;
+  padding: 0 20px;
+  background: #5b5bd6;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.add-form button:hover {
+  opacity: 0.9;
+}
+
+.task-list {
+  display: grid;
+  gap: 12px;
+}
+
+.task-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #fafbff;
+}
+
+.task-id {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #e9e9ff;
+  color: #4b4bb7;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.task-content {
+  min-width: 0;
+}
+
+.task-content h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.category {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #e8f7ee;
+  color: #167345;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 20px 12px;
+  }
+
+  .board {
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .count {
+    align-self: flex-start;
+  }
+
+  .add-form {
+    flex-direction: column;
+  }
+
+  .add-form button {
+    padding: 13px 20px;
+  }
+}
